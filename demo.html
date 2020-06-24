@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="./js/vue.js" type="text/javascript" charset="utf-8"></script>
+    <link rel="stylesheet" type="text/css" href="./css/demo.css" />
+    <style type="text/css">
+
+    </style>
+
+
+    </style>
+</head>
+
+<body>
+
+    <div id="outo">
+        <div id="into">
+            <h2>煤球记事本</h2>
+            <ul>
+                <li><input type="text" v-model="inputValue" @keyup.enter="add" /></li>
+                <li v-for="(item,index) in list" @mouseenter="enter(index)" @mouseleave="leave(index)">
+                    <span>{{index+1}}.</span>
+                    <label>{{item}}</label>
+                    <button type="button" @click="remove(index)" v-show="isShow&&index==current">remove</button>
+                </li>
+                <div id="items-count">
+                    <span>总共 {{list.length}} 条 <button type="button" id="items-clear">Clear</button></span>
+                </div>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript" charset="utf-8">
+        var into = new Vue({
+            el: "#into",
+            data: {
+                list: ["写代码", "写作业", "背单词"],
+                inputValue: "听音乐",
+                isShow: false,
+                current: 0
+            },
+            methods: {
+                add: function() {
+                    this.list.push(this.inputValue);
+                },
+                remove: function(index) {
+                    this.list.splice(index, 1);
+                },
+                enter: function(index) {
+                    this.isShow = true;
+                    this.current = index;
+                },
+                leave: function(index) {
+                    this.isShow = false;
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>
