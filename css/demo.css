@@ -1,89 +1,102 @@
+#outo {
+    /*父：水平居中第一种*/
+    position: relative;
+    height: 600px;
+    /*父：水平居中第二种*/
+    /* display: grid; */
+}
 
-					#outo{
-						 /*父：水平居中第一种*/
-						 position: relative; 
-						 height: 600px;
-						 /*父：水平居中第二种*/
-						 /* display: grid; */
-					}
-					#into{
-						 width: 500px;
-						 height: 600px;
-						 /*子：水平居中第一种*/
-						 position: absolute; 
-						 left: 50%;
-						 transform: translate(-50%);
-						 /*子：水平居中第二种*/
-						 margin:auto;
-					}							
-					h2{						
-						text-align: center;
-						display: block;
-					}
-					ul{
-						padding: 10px 10px;
-						display: block;
-						list-style: none;
-						background-color: aliceblue;
-						width: 500px;
-						height: 500px;
-						overflow: scroll;
-					}
-					li{
-						position: relative;
-						margin: 10px;
-						padding: 5px;
-						background-color: white;
-						height: 50px;
-						font-size: 2em;
-						border-radius: 10px;
-						white-space: nowrap;/*文本不换行*/
-						overflow: hidden;/*溢出隐藏*/
-					}
-					li:hover{
-						background-color: beige;
-						
-					}
-					li:active{
-						background-color: #FAEBD7;
-						}
-					input{
-						width: 455px;
-						padding: 5px;
-						background-color: white;
-						height: 40px;
-						border-radius: 10px;
-					}
-					input:focus{
-						outline:0;
-						} 
-					button{
-						position: absolute;
-						left: 85%;
-						top: 35%;
-						background-color: black;
-						border-color: black;
-						border-radius: 20px;
-						border-style: double;
-						box-shadow: none;
-						color: #FFFFFF;
-					}					
-					button:focus{
-						outline:0;
-						} 
-					button:hover{
-						cursor: pointer;						
-						color: antiquewhite;
-					}
-					#items-count{
-						position: relative;
-						margin: 10px;
-						padding: 5px;
-						margin-top: 20px;
-						border-color: #000000;
-					}
-					#items-clear{
-						position: absolute;
-						top: 1%;
-				        left: 85%;
-					}
+#into {
+    width: 500px;
+    height: 600px;
+    /*子：水平居中第一种*/
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    /*子：水平居中第二种*/
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+    display: block;
+}
+
+ul {
+    padding: 10px 10px;
+    display: block;
+    list-style: none;
+    background-color: aliceblue;
+    width: 500px;
+    height: 500px;
+    overflow: auto;
+}
+
+li {
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    height: 50px;
+    font-size: 2em;
+    border-radius: 10px;
+    white-space: nowrap;
+    /*文本不换行*/
+    overflow: auto;
+    /*溢出隐藏*/
+}
+
+li:hover {
+    background-color: beige;
+}
+
+li:active {
+    background-color: #FAEBD7;
+}
+
+input {
+    width: 455px;
+    padding: 5px;
+    background-color: white;
+    height: 40px;
+    border-radius: 10px;
+}
+
+input:focus {
+    outline: 0;
+}
+
+button {
+    position: absolute;
+    left: 85%;
+    top: 35%;
+    background-color: black;
+    border-color: black;
+    border-radius: 20px;
+    border-style: double;
+    box-shadow: none;
+    color: #FFFFFF;
+}
+
+button:focus {
+    outline: 0;
+}
+
+button:hover {
+    cursor: pointer;
+    color: antiquewhite;
+}
+
+#items-count {
+    position: relative;
+    margin: 10px;
+    padding: 5px;
+    margin-top: 20px;
+    border-color: #000000;
+}
+
+#items-clear {
+    position: absolute;
+    top: 1%;
+    left: 85%;
+}
